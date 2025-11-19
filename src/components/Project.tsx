@@ -25,9 +25,8 @@ function Project() {
 
           <h2>Tempify OJ Web-admin</h2>
           <p>
-            Designed, developed, and launched a 3D multiplayer racing game with
-            C# and Unity. This is available on Itch.io for gamers worldwide to
-            enjoy.
+            A platform designed to connect users with job opportunities they
+            want, providing an engaging and efficient job search experience.{" "}
           </p>
         </div>
         <div className="project">
