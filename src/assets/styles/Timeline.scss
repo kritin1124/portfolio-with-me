@@ -1,35 +1,64 @@
-.vertical-timeline span {
-    color: white;
+/* =============================== */
+/*           BASE STYLE            */
+/* =============================== */
+
+.vertical-timeline span,
+.vertical-timeline-element .vertical-timeline-element-date {
     font-family: 'Courier Prime', monospace;
 }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
+.timeline-container{
+    background-image: url("../images/bg4.png");
+    background-size: cover;
+}
+.items-container {
+    h1 {
+    margin-bottom: 40px;
+}
 }
 
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+
+
+
+
+/* =============================== */
+/*          TIMELINE CARD          */
+/* =============================== */
+
+.vertical-timeline-element {
+    transition: transform .2s ease;
 }
 
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+.vertical-timeline-element:hover {
+    transform: translateY(-4px);
 }
 
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+/* Content box (Glass Effect) */
+.vertical-timeline-element .vertical-timeline-element-content {
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+/* Arrow */
+.vertical-timeline-element .vertical-timeline-element-content-arrow {
+    border-right: 7px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+/* =============================== */
+/*             ICONS               */
+/* =============================== */
+
+.vertical-timeline-element-icon {
+    background: #5000ca !important;
+    box-shadow: 0 0 12px rgba(80, 0, 202, 0.6);
 }
 
-.svg-inline--fa {
-    color: white;
-}
+/* =============================== */
+/*           RESPONSIVE            */
+/* =============================== */
 
 @media screen and (max-width: 1170px) {
     .vertical-timeline-element .vertical-timeline-element-date {

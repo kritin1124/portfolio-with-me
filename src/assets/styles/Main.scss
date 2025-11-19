@@ -1,20 +1,180 @@
-.dark-mode .about-section {
-    background-color: rgba(0, 0, 0, 0.2);
-}
+/* ======================================================== */
+/*                     ABOUT SECTION                       */
+/* ======================================================== */
 
+/* ---------- LIGHT THEME ---------- */
 .about-section {
     display: flex;
     gap: 30px;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 0px 15%;
+    padding: 0 15%;
     min-height: 700px;
-    background-image: url("../images/bg-dark.png");
+    background-color: #f8f9fa;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    color: #111; /* Text color for light mode */
+
+    .content {
+        text-align: left;
+        z-index: 2;
+
+        h1 {
+            font-size: 5em;
+            margin: 0;
+            color: #111;
+        }
+
+       
+        p, li {
+            font-size: 1.5em;
+            margin: 0;
+            color: #333;
+        }
+
+        .social_icons {
+            display: flex;
+            gap: 10px;
+            color: #111;
+
+            svg {
+                font-size: 1.8em;
+                transition: transform .3s ease, color .3s ease;
+                &:hover {
+                    transform: scale(1.15) rotate(10deg);
+                    color: #007bff;
+                }
+            }
+        }
+
+        .mobile_social_icons {
+            display: none;
+        }
+    }
+
+    .image-wrapper {
+        z-index: 2;
+        img {
+            width: 150px;
+            border-radius: 50%;
+            transition: transform .3s ease;
+            &:hover {
+                transform: scale(1.05) rotate(-3deg);
+            }
+        }
+    }
+}
+
+/* ---------- DARK THEME ---------- */
+.dark-mode .about-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("../images/bg3.png");
+    color: #fff;
+
+    .content {
+        h1 {
+            color: #fff;
+        }
+        p, li {
+            color: #e5e7eb;
+        }
+        .social_icons {
+            color: #fff;
+            svg:hover {
+                color: #61dafb;
+            }
+        }
+    }
+
+    .image-wrapper img {
+        border: 2px solid rgba(255,255,255,0.3);
+    }
+}
+
+/* ======================================================== */
+/*                       RESPONSIVE                          */
+/* ======================================================== */
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding-top: 150px;
+        display: block;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        h1 {
+            font-size: 4em !important;
+            text-align: left;
+        }
+
+        p, li {
+            text-align: left;
+        }
+
+        .content {
+            width: 90%;
+            padding-bottom: 5%;
+        }
+
+        .image-wrapper {
+            width: 100%;
+        }
+
+        .social_icons {
+            display: none !important;
+        }
+
+        .mobile_social_icons {
+            display: flex !important;
+        }
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .about-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-left {
+        padding-top: 20px;
+        float:left;
+    }
+
+    .nav-left img {
+        height: 35px
+    }
+
+    .nav-right {
+        float:right;
+    }
+
+    .nav-right li {
+        padding: 10px 15px;
+        list-style:none;
+        font-size:13px;
+        color:white;
+        width: 10%;
+    }
+
+    .nav-right ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .about {
+        font-size: 12px;
+    }
+}
+.dark-mode .vertical-timeline-element-date{
+    color: white;
 }
 
 .about-section .content {
@@ -37,6 +197,11 @@
     }
 
     p {
+        font-size: 1.5em;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    li{
         font-size: 1.5em;
         margin-block-start: 0px;
         margin-block-end: 0px;
